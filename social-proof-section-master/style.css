@@ -179,7 +179,7 @@
 
 @media only screen and (min-width: 800px) {
   .hero-section {
-    padding: 8em 12em;
+    padding: 8em 18em;
   }
   
   .intro-container {
@@ -227,7 +227,7 @@
     display: flex;
     flex-direction: row;
     gap: 3em;
-    padding: 1.2em;
+    padding: 1.5em;
     min-width: 35em;
   }
 
