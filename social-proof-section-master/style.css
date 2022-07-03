@@ -1,0 +1,254 @@
+/* ------------------ */
+/* Custom properties */
+/* ------------------ */
+
+:root {
+  --very-dark-magenta:hsl(300, 43%, 22%);
+  --soft-pink: hsl(333, 80%, 67%);
+  --body-clr: #fff;
+  --dark-grayish-magenta: hsl(303, 10%, 53%);
+  --light-grayish-magenta: hsl(300, 24%, 96%);
+ }
+ 
+ /* ------------------ */
+ /* Reset */
+ /* ------------------ */
+ 
+ /* Box sizint */
+ 
+ *,
+ *::before,
+ *::after {
+  box-sizing: border-box;
+ }
+ 
+ /* Reset margin */
+ 
+ body,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ p,
+ figure,
+ picture {
+  margin: 0;
+ }
+
+ ul {
+  margin: 0;
+ }
+ 
+ /*body */
+ body {
+  /* line-height: 1.5; */
+  min-height: 100vh;
+  Font-size: 16px;
+  font-family: 'League Spartan', sans-serif;
+ }
+ 
+ /* images */
+ img,
+ picture {
+  max-width: 100%;
+  display: block;
+ }
+ 
+ /* forms elements */
+ input,
+ button,
+ textarea,
+ select {
+  font: inherit;
+ }
+ 
+ /* ------------------ */
+ /* Utility classes */
+ /* ------------------ */
+ 
+ .flex {
+  display: flex;
+  gap: var(--gap, 1rem);
+ }
+ 
+ .grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+ }
+ 
+ .container {
+  padding: 1;
+ }
+ 
+/* ------- STYLING ------- */
+/* ------- PGONE PREVIEW ------- */
+
+
+
+.hero-section {
+  padding: 5em 1.5em;
+}
+
+.intro-container {
+  display: inline;
+}
+
+.hero-text {
+  text-align: center;
+  margin-bottom: 1.8em;
+}
+
+.hero-text h1 {
+  font-size: 40px;
+  line-height: 0.8;
+  color: var(--very-dark-magenta);
+  margin-bottom: 0.8em;
+}
+
+#desktop-br {
+  display: none;
+}
+
+.hero-text p {
+  color: var(--dark-grayish-magenta);
+  font-weight: 500;
+}
+
+.hero-rating ul{
+  list-style: none;
+  padding: 0;
+  margin-bottom: 3em;
+}
+
+.hero-rating ul li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--light-grayish-magenta);
+  padding: 1em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.hero-rating img {
+  height: 100%; width: 17px;
+}
+
+.hero-rating p {
+  color: var(--very-dark-magenta);
+  font-weight: 700;
+  padding-top: 1em;
+}
+
+.stars {
+  display: flex;
+  gap: 8px;
+}
+
+.card {
+  background: var(--very-dark-magenta);
+  color: var(--light-grayish-magenta);
+  padding: 2.5em;
+  border-radius: 10px;
+  margin-bottom: 1em;
+}
+
+.card img {
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  margin: 0 1.5em 1em 0;
+}
+
+.card__name {
+  font-weight: bold;
+  display: flex;
+}
+
+.card__name span {
+  color: var(--soft-pink);
+  font-weight: normal;
+}
+
+.card__text {
+  line-height: 1.4;
+}
+
+/*  ------- STYLING ------- */
+/* ------- DESKTOP VIEW ------- */
+
+@media only screen and (min-width: 800px) {
+  .hero-section {
+    padding: 8em 12em;
+  }
+  
+  .intro-container {
+    display: flex;
+    margin-bottom: 3em;
+  }
+
+  .hero-text h1 {
+    font-size: 64px;
+    line-height: 0.8;
+  }
+
+  .hero-text {
+    flex: 1;
+    font-size: 20px;
+    text-align: left;
+    max-width: 25em;
+    line-height: 1.4;
+  }
+
+  .hero-text br {
+    display: none;
+  }
+
+  .hero-rating {
+    position: relative;
+    flex: 1;
+    max-width: 35em;
+    margin-left: auto;
+    margin-bottom: 1.8em;
+
+  }
+
+  .hero-rating ul {
+    position: absolute;
+    bottom: 0;
+    margin: 0;
+  }
+
+  .hero-rating p {
+    padding: 0;
+  }
+
+  .hero-rating ul li{
+    display: flex;
+    flex-direction: row;
+    gap: 3em;
+    padding: 1.2em;
+    min-width: 35em;
+  }
+
+  .rating__1 {
+    transform: translateX(-100px);
+  }
+
+  .rating__2 {
+    transform: translateX(-50px);
+  }
+
+  .hero-cards {
+    display: flex;
+    gap: 2em;
+  }
+
+  .card__2 {
+    transform: translateY(1em);
+  }
+
+  .card__3 {
+    transform: translateY(2em);
+  }
+}
